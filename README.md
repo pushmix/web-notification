@@ -78,14 +78,15 @@ Yes, Push Notifications are built on top of Service Worker API, which responds t
 
 **Subscription Code**
 
-Copy and paste subscription code at the bottom of the web page and start building your audience. You can add subscription code to more than one page. When webpage is loaded subscription code trigger the opt in prompt to be displayed. In the event when web browser is not supported opt in prompt will not be shown.
+*Please do not use the subscription code bellow, this is only for illustration purposes.*
+Copy and paste subscription code (subscriber id is unique for each subscription) at the bottom of the web page and start building your audience. You can add subscription code to more than one page. When webpage is loaded subscription code trigger the opt in prompt to be displayed. In the event when web browser is not supported opt in prompt will not be shown.
 
 You can easily change the behaviour and trigger opt in prompt to be displayed on the button click instead o the page load. 
 
 ```javascript
 <script type="text/javascript">
     var _pm = {
-        "subscriber_id": "XcXMZHVHSVCWDWXVtzphcibuT",
+        "subscriber_id": "UNIQUE_SUBSCRIPTION_ID",
         "sw" : "https://www.pushmix.co.uk/pm_service_worker.js",
         "api": "https://www.pushmix.co.uk/api/"
     };
