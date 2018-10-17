@@ -78,17 +78,17 @@ Yes, Push Notifications are built on top of Service Worker API, which responds t
 
 **Subscription Code**
 
-**_Please do not use the subscription code bellow, this is only for illustration purposes._**
+`Please do not use the subscription code bellow, this is only for illustration purposes.`
 
-Copy and paste subscription code (subscriber id is unique for each subscription) at the bottom of the web page and start building your audience. You can add subscription code to more than one page. When webpage is loaded subscription code trigger the opt in prompt to be displayed. In the event when web browser is not supported opt in prompt will not be shown.
+Copy subscription code from dashboard and paste it at the bottom of the web page to start building your audience. You can add subscription code to more than one page. When webpage is loaded subscription code trigger the opt in prompt to be displayed. In the event when web browser is not supported opt in prompt will not be shown.
 
-You can easily change the behaviour and trigger opt in prompt to be displayed on the button click instead o the page load. 
+You can easily change the behaviour and trigger opt in prompt to be displayed on the click event instead of the page load. 
 
 ```javascript
 <script type="text/javascript">
     var _pm = {
         "subscriber_id": "UNIQUE_SUBSCRIPTION_ID",
-        "sw" : "https://www.pushmix.co.uk/pm_service_worker.js",
+        "sw" : "https://YOUR_DOMAIN_NAME/pm_service_worker.js",
         "api": "https://www.pushmix.co.uk/api/"
     };
     (function(){
@@ -104,3 +104,29 @@ You can easily change the behaviour and trigger opt in prompt to be displayed on
 ```
 
 ![alt text](img/new_4.png "Preview opt in prompt")
+
+### Pushing Notification
+
+Dashboard displays one or more of your subscriptions summary. Press `Push Notification` button at the bottom of subscription card.There are three steps that you will need to go through: Select Audience, Enter Content and Actions.
+
+#### 1. Audience
+
+**Audience**
+At this you required select subscribers audience you would like to target, by default all subscribers are selected. In the brackets total number of subscribers are displayed. As per print screen bellow All Audience have 3 subscribers. 
+
+During subscription creation process, if you have specified additional topics, they also be available for selection from dropdown box. Only one audience group can be selected at a time.
+
+**Priority**
+Next you have Priority dropdown that consists of two choices High and Normal, set to `High` by default. This feature regulate how push notification being delivered. 
+
+High priority messages attempted to be delivered immediately. 
+
+Normal priority messages won't open network connections on a sleeping device, and their delivery may be delayed to conserve battery.
+
+**Notification Lifespan**
+
+Maximum notification lifespan of a message correspond to the maximum period of time for which message delivery will be attempted, set to `1 Hour` by default. This feature helps to prevent you from delivering messages with outdated contain or content that no longer relevant. 
+
+Consider subscriber device is turned off and you sending a message reminding about the event that happening at 6pm today. Subscriber switch on it's device on the following day to receive push notification that out of date no longer relevant.
+
+![alt text](img/new_6.png "1. Audience")
