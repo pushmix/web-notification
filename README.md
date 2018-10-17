@@ -78,8 +78,6 @@ Yes, Push Notifications are built on top of Service Worker API, which responds t
 
 **Subscription Code**
 
-`Please do not use the subscription code bellow, this is only for illustration purposes.`
-
 Copy subscription code from dashboard and paste it at the bottom of the web page to start building your audience. You can add subscription code to more than one page. When webpage is loaded subscription code trigger the opt in prompt to be displayed. In the event when web browser is not supported opt in prompt will not be shown.
 
 You can easily change the behaviour and trigger opt in prompt to be displayed on the click event instead of the page load. 
