@@ -111,17 +111,21 @@ Dashboard displays one or more of your subscriptions summary. Press `Push Notifi
 
 #### 1. Audience
 
+
 **Audience**
+
 At this you required select subscribers audience you would like to target, by default all subscribers are selected. In the brackets total number of subscribers are displayed. As per print screen bellow All Audience have 3 subscribers. 
 
 During subscription creation process, if you have specified additional topics, they also be available for selection from dropdown box. Only one audience group can be selected at a time.
 
 **Priority**
+
 Next you have Priority dropdown that consists of two choices High and Normal, set to `High` by default. This feature regulate how push notification being delivered. 
 
 High priority messages attempted to be delivered immediately. 
 
 Normal priority messages won't open network connections on a sleeping device, and their delivery may be delayed to conserve battery.
+
 
 **Notification Lifespan**
 
