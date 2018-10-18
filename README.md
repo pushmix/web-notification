@@ -14,9 +14,15 @@ Features includes:
 * large image support
 
 
+
+
 ## Requirements
 * write access to the website files
 * website url must starts with `https://`
+
+
+
+
 
 ## Getting Started
 This instructions will describe how to creating your first subscription opt in prompt, 
@@ -24,6 +30,10 @@ start build up your subscribers audience and push notifications.
 
 First step is to create new account,simply login using Google or Facebook accounts [Pushmix - login](https://dash.pushmix.co.uk/login).
 Alternatively create new account here - [Pushmix - register](https://dash.pushmix.co.uk/register). Only details that required is a name of your choice and email address.
+
+
+
+
 
 ### New Subscription
 
@@ -74,7 +84,9 @@ Press `Submit` to create subscription, if all mandatory fields supplied you will
 
 
 
-### Adding Subscription Code
+
+
+### Subscription Code
 
 
 **Service Worker**
@@ -133,9 +145,12 @@ Opt in prompt can't only be used for subscribing, users can toggle their subscri
 
 
 
+
+
 ### Pushing Notification
 
 Dashboard displays one or more of your subscriptions summary. Press `Push Notification` button at the bottom of subscription card.There are three steps that you will need to go through to prepare notification message: Select Audience, Enter Content and Actions.
+
 
 #### 1. Audience
 
@@ -171,6 +186,9 @@ Consider subscriber device is turned off and you sending a message containing di
 Enter title and notification body here, keep it brief. 
 In the `URL` field enter valid website address, when user clicks or press on notification this URL will be loaded in the web browser.
 
+![alt text](https://pushmix.github.io/web-notification/img/new_7.png "2. Content")
+
+
 
 #### 2. Actions
 
@@ -183,6 +201,8 @@ Additionally you can select an icon from dropdown list to displayed on the butto
 
 Large image can be included in notification and displayed to the user, recommended width of 1350px or more would be a good bet. Simply enter valid image URL.
 
+![alt text](https://pushmix.github.io/web-notification/img/new_8.png "3. Actions")
+
 
 **Push Test**
 
@@ -190,5 +210,24 @@ It's always good to push the test and preview results before sending message to 
 If you web browser supports push notifications you will see one shortly. In case when your web browser is not compatible with push notifications you can still send the message by pressing `Push Notification` button.
 
 Once you happy with test press `Push Notification` button and your notifications will start being dispatched. Check your Google Analytics Real-Time Events section to see user interaction.
+
+| Windows Chrome  | 
+| ------------- |
+| ![alt text](https://pushmix.github.io/web-notification/img/win_chrome.png "Windows Chrome")|
+
+
+| Linux Chrome  | 
+| ------------- |
+| ![alt text](https://pushmix.github.io/web-notification/img/linux_chrome.png "Linux Chrome")|
+
+
+| Linux Chromium  | 
+| ------------- |
+| ![alt text](https://pushmix.github.io/web-notification/img/linux_chromium.png "Linux Chromium")|
+
+
+| Linux Firefox  | 
+| ------------- |
+| ![alt text](https://pushmix.github.io/web-notification/img/linux_firefox.png "Linux Firefox")|
 
 
