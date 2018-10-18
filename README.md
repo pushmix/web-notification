@@ -1,6 +1,9 @@
-# [Pushmix](https://www.pushmix.co.uk) - web push notification service
+#Pushmix
+[https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
-Service allows to create and push customised web notification including 
+Pishmix is web push notification service helping to create and push customised web notification.
+
+Features includes:
 * audience segmentation via topic subscription 
 * customised opt in prompt
 * real time user interactions in Google Analytics
