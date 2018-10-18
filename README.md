@@ -38,20 +38,20 @@ All subscription details can be changed at later time in exception of website ad
 
 User can create more than one website subscription.
 
-![alt text](img/new_1.png "1.Details")
+![alt text](https://pushmix.github.io/web-notification/img/new_1.png "1.Details")
 
 You can review opt in prompt by pressing `Preview` button, continue entering details and see changes in real time.
 
 
-![alt text](img/new_2.png "Preview opt in prompt")
+![alt text](https://pushmix.github.io/web-notification/img/new_2.png "Preview opt in prompt")
 
 **2. Topics**
 
 Instead of sending notifications to all subscribers, you may offer subscription to up to two additional topics of user interest. When sending notification this allows segment and target only those users who has expressed interested in specific subject.
 
-![alt text](img/new_3.png "Topics")
+![alt text](https://pushmix.github.io/web-notification/img/new_3.png "Topics")
 
-![alt text](img/new_4.png "Opt in prompt with Topics")
+![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Opt in prompt with Topics")
 
 **3. Extra**
 
@@ -67,7 +67,7 @@ Both of these fields are optional, however if the icon and badge parameters are 
 
 Track user interactions in real time with Google Analytics Event Tracking. Enter your GA Tracking Id to receive web notification views and action button click events.
 
- ![alt text](img/new_5.png "Extra")
+ ![alt text](https://pushmix.github.io/web-notification/img/new_5.png "Extra")
 
 Press `Submit` to create subscription, if all mandatory fields supplied you will be shows the Subscription Code and instructions on how to embed the code.
 
@@ -120,7 +120,7 @@ You can easily change the behaviour and trigger opt in prompt to be displayed on
 </script> 
 ```
 
-![alt text](img/new_4.png "Preview opt in prompt")
+![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Preview opt in prompt")
 
 Visit the section of your website where you have added the subscription code to ensure the opt in prompt is working as expected. Any changes to the subscription details applied on the dashboard will have immediate effect in the opt in prompt, reload is required. Keep in mind that subscription is based on Web Browser token and one device can subscribe multiply times. 
 
@@ -158,7 +158,7 @@ Maximum notification lifespan of a message correspond to the maximum period of t
 
 Consider subscriber device is turned off and you sending a message containing discount code that expire today at 6pm. Subscriber switch on it's device on the following day to receive push notification with discount code that can't be used.
 
-![alt text](img/new_6.png "1. Audience")
+![alt text](https://pushmix.github.io/web-notification/img/new_6.png "1. Audience")
 
 
 #### 2. Content
