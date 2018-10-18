@@ -1,8 +1,8 @@
-# Pushmix
+# ![Pushmix](https://www.pushmix.co.uk/media/favicons/favicon-32x32.png) Pushmix
 
 [https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
-Pishmix is web push notification service helping to create and push customised web notification.
+Pishmix is web push notification service helping to create and send customised web notification.
 
 Features includes:
 * audience segmentation via topic subscription 
@@ -73,7 +73,9 @@ Track user interactions in real time with Google Analytics Event Tracking. Enter
 Press `Submit` to create subscription, if all mandatory fields supplied you will be shows the Subscription Code and instructions on how to embed the code.
 
 
-#### Adding Subscription Code
+
+### Adding Subscription Code
+
 
 **Service Worker**
 
