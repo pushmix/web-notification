@@ -88,6 +88,11 @@ Press `Submit` to create subscription, if all mandatory fields supplied you will
 
 ### Subscription Code
 
+Currently two options are available to integrate Pushmix service with your website.
+* [Laravel package](https://github.com/pushmix/laravel-web-notification) - simpllified integration with our service for Laravel applications
+* JavaScript - simply copy and paste a few lines of code in the footer of your web page.
+
+JavaScript integration can also performed via Google Tag Manager.
 
 **Service Worker**
 
