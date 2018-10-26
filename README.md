@@ -2,7 +2,7 @@
 
 [https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
-Pishmix is web push notification service helping to create and send customised web notification.
+Pishmix is a web push notification service, aiming at effectively re-engaging website visitors with customized web notifications. Our service relies on Firebase Cloud Messaging cross-platform messaging solution. It's is free to register and use Pushmix service.
 
 Features includes:
 * audience segmentation via topic subscription 
@@ -13,80 +13,95 @@ Features includes:
 * notification logs
 * large image support
 
+View all available [features](https://www.pushmix.co.uk/features).
 
 
 
 ## Requirements
+There are a few requirements must be met in order to uset this service:
+
 * write access to the website files
 * website url must starts with `https://`
 
+
+Google Tag Manager can be used to include required JavaScript. See Google search results for articles that describes this process.
 
 
 
 
 ## Getting Started
-This instructions will describe how to creating your first subscription opt in prompt, 
-start build up your subscribers audience and push notifications.
+To use this service, you are required to create an account, the only details that are required: name and email address. It's is free to register and use Pushmix service.
 
-First step is to create new account,simply login using Google or Facebook accounts [Pushmix - login](https://dash.pushmix.co.uk/login).
-Alternatively create new account here - [Pushmix - register](https://dash.pushmix.co.uk/register). Only details that required is a name of your choice and email address.
+By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://dash.pushmix.co.uk/terms), including our [Privacy Policy](https://dash.pushmix.co.uk/policy).
 
-
+Fastest way to sign up is login with Google or Facebook accounts - [Login](https://dash.pushmix.co.uk/login). Alternatively [Register](https://dash.pushmix.co.uk/register) new account by simply entering name, email addresses and password of your choice.
 
 
 
-### New Subscription
 
-#### Creating subscription
+### Creating subscription
+
 
 **1. Details**
 
-In the dashboard you will be asked to create your first subscription, go for it.
-Enter your website address, starting with `https://` where you wish visitors to subscribe for web notifications.
-Enter opt in title and optional line of text to provide subscribers with more details about this subscription.
+In the dashboard click New Subscription and enter your website address where you wish visitors to subscribe for web notifications. Enter title and optional line of text to provide subscribers with more details what they subscribing for.
+
+All subscription details can be edited later in exception of website address.
+
+To review opt in prompt click Preview button, continue entering details and see changes in real time.
 
 All subscription details can be changed at later time in exception of website address. If you have added website address wrong simply delete subscription and start again.
 
 User can create more than one website subscription.
 
-![alt text](https://pushmix.github.io/web-notification/img/new_1.png "1.Details")
+![alt text](https://pushmix.github.io/web-notification/img/new_subscription_details_1.png "1.Details")
 
 You can review opt in prompt by pressing `Preview` button, continue entering details and see changes in real time.
 
 
-![alt text](https://pushmix.github.io/web-notification/img/new_2.png "Preview opt in prompt")
+![alt text](https://pushmix.github.io/web-notification/img/new_subscription_details_2.png "Preview opt in prompt")
 
 **2. Topics**
 
-Instead of sending notifications to all subscribers, you may offer subscription to up to two additional topics of user interest. When sending notification this allows segment and target only those users who has expressed interested in specific subject.
+Topics are important elements of subscription and allow users to subscribe only for notifications of specific types i.e. Special Offers .
 
-![alt text](https://pushmix.github.io/web-notification/img/new_3.png "Topics")
+Topics allows you to segment audience and target only those users who have subscribed to a specific topic. For example send notification only to those users who have opted in for Special Offers.
 
-![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Opt in prompt with Topics")
+However topics are optional and you can skip this step.
+
+To review opt in prompt click Preview button, continue entering details and see changes in real time.
+
+![alt text](https://pushmix.github.io/web-notification/img/new_subscription_topics_1.png "Topics")
+
 
 **3. Extra**
 
-Notification icon, badge and Google Analytics tracking id, all these parameters are optional. 
+Notification icon, badge and Google Analytics tracking id, all these parameters are optional.
 
-Icon is the small image that displayed next to the title and the body if the notification. Recommended icon image dimensions is 192x192 pixels. 
+Icon is the small image that displayed next to the title and the body if the notification. Recommended icon image dimensions is 192x192 pixels.
 
-Badge is monochrome icon that used to provide more information to the user about where the notification sender. At the time of writing the badge is only used on Chrome for Android.
-
-Some browsers only allow icon and badge images to be served over HTTPS.
+Badge is monochrome icon that used to provide more information to the user about where the notification sender. At the time of writing the badge is only used on Chrome for Android. Some browsers only allow icon and badge images to be served over HTTP.
 
 Both of these fields are optional, however if the icon and badge parameters are not provided, default Pushmix icons will be used.
 
 Track user interactions in real time with Google Analytics Event Tracking. Enter your GA Tracking Id to receive web notification views and action button click events.
 
- ![alt text](https://pushmix.github.io/web-notification/img/new_5.png "Extra")
+Press Submit to create subscription, if all mandatory fields supplied correctly instructions on how to embed subscription code will be displayed.
 
-Press `Submit` to create subscription, if all mandatory fields supplied you will be shows the Subscription Code and instructions on how to embed the code.
-
-
+![alt text](https://pushmix.github.io/web-notification/img/new_subscription_extra_1.png "Extra")
 
 
 
-### Subscription Code
+
+### Installation
+
+Currently two options are available to integrate Pushmix service with your website.
+
+| Laravel Package       | JavaScript           |
+| ------------- |:-------------:|
+| Using our Laravel package makes integration simple with our service for Laravel applications. This package profides following featueres:       | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt in prompt. |
+|  * Subscription opt in prompt in your templates     | JavaScript integration can also performed via Google Tag Manager.      |
+|  * Send push notification messages from Laravel application|      |
 
 Currently two options are available to integrate Pushmix service with your website.
 * [Laravel package](https://github.com/pushmix/laravel-web-notification) - simpllified integration with our service for Laravel applications
