@@ -98,7 +98,7 @@ Press Submit to create subscription, if all mandatory fields supplied correctly 
 Currently two options are available to integrate Pushmix service with your website.
 
 | Laravel Package       | JavaScript           |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | Using our Laravel package makes integration simple with our service for Laravel applications. This package profides following featueres:       | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt in prompt. |
 |  * Subscription opt in prompt in your templates     | JavaScript integration can also performed via Google Tag Manager.      |
 |  * Send push notification messages from Laravel application|      |
