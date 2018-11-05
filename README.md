@@ -298,3 +298,10 @@ There are also five graphs and map are available that visualize above informatio
 ![alt text](https://pushmix.github.io/web-notification/img/logs_summary.png "Logs Summary")
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details.png "Logs Details")
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details_2.png "Logs Details")
+
+
+## Issues
+If you come across any issues please report them [here](https://github.com/pushmix/web-notification/issues).
+
+## Security Vulnerabilities
+If you discover a security vulnerability please send an e-mail to support@pushmix.co.uk. 
