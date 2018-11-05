@@ -43,6 +43,7 @@ Fastest way to sign up is login with Google or Facebook accounts - [Login](https
 
 
 
+
 ### Creating subscription
 
 
@@ -109,6 +110,8 @@ Currently two options are available to integrate Pushmix service with your websi
 
 
 If you using Laravel Package or WordPress Plugin you can skip Installation section.
+
+
 
 
 **Service Worker**
