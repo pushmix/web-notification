@@ -1,8 +1,10 @@
-# ![Pushmix](https://www.pushmix.co.uk/media/favicons/favicon-32x32.png) Pushmix
+## ![Pushmix](https://www.pushmix.co.uk/media/favicons/favicon-32x32.png) Pushmix - Web Push Notification Service
 
 [https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
 Pishmix is a web push notification service, aiming at effectively re-engaging website visitors with customized web notifications. Our service relies on Firebase Cloud Messaging cross-platform messaging solution. It's is free to register and use Pushmix service.
+
+You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://www.pushmix.co.uk).
 
 Features includes:
 * audience segmentation via topic subscription 
@@ -12,8 +14,10 @@ Features includes:
 * action buttons with icons
 * notification logs
 * large image support
+* Laravel package
+* WordPress plugin
 
-View all available [features](https://www.pushmix.co.uk/features).
+View all available [features](https://www.pushmix.co.uk/features) or see [documentation](https://www.pushmix.co.uk/docs) for more details.
 
 
 
@@ -21,7 +25,7 @@ View all available [features](https://www.pushmix.co.uk/features).
 There are a few requirements must be met in order to uset this service:
 
 * write access to the website files
-* website url must starts with `https://`
+* website url must served via `HTTPS://` or run on `localhost` to display opt inn prompt
 
 
 Google Tag Manager can be used to include required JavaScript. See Google search results for articles that describes this process.
@@ -32,7 +36,7 @@ Google Tag Manager can be used to include required JavaScript. See Google search
 ## Getting Started
 To use this service, you are required to create an account, the only details that are required: name and email address. It's is free to register and use Pushmix service.
 
-By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://dash.pushmix.co.uk/terms), including our [Privacy Policy](https://dash.pushmix.co.uk/policy).
+By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://www.pushmix.co.uk/terms), including our [Privacy Policy](https://www.pushmix.co.uk/privacy).
 
 Fastest way to sign up is login with Google or Facebook accounts - [Login](https://dash.pushmix.co.uk/login). Alternatively [Register](https://dash.pushmix.co.uk/register) new account by simply entering name, email addresses and password of your choice.
 
@@ -97,13 +101,13 @@ Press Submit to create subscription, if all mandatory fields supplied correctly 
 
 Currently two options are available to integrate Pushmix service with your website.
 
-| Laravel Package       | JavaScript           |
-| ------------- |-------------|
-| Using our [Laravel package](https://github.com/pushmix/laravel-web-notification) makes integration simple with our service for Laravel applications. This package profides following featueres:       | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt in prompt. |
-|  * Subscription opt in prompt in your templates     | JavaScript integration can also performed via Google Tag Manager.      |
-|  * Send push notification messages from Laravel application|      |
+| Laravel   | WordPress     | JavaScript    |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |---------------------------------------------------------------------------------------------------    |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
+| [Laravel package](https://github.com/pushmix/laravel-web-notification) allows to include opt-in prompt with just one line of code and send web notifications from Laravel applications.   | Integrate with WordPress just with few clicks and push notifications from your website dashboard.     | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt-in prompt.     |
+| Subscription opt-in prompt in your templates  | Send web notifications from WordPress Dashboard   | JavaScript integration can also be performed via Google Tag Manager.  |
+| Send push notification messages from Laravel application  | Choose pages and posts to display opt-in prompt   |   |
 
-If you using Laravel Package you can skip Installation section.
+If you using Laravel Package or WordPress Plugin you can skip Installation section.
 
 
 **Service Worker**
