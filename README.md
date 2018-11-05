@@ -102,19 +102,20 @@ Press Submit to create subscription, if all mandatory fields supplied correctly 
 Currently two options are available to integrate Pushmix service with your website.
 
 | Laravel   | WordPress     | JavaScript    |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |---------------------------------------------------------------------------------------------------    |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
-| [Laravel package](https://github.com/pushmix/laravel-web-notification) allows to include opt-in prompt with just one line of code and send web notifications from Laravel applications.   | Integrate with WordPress just with few clicks and push notifications from your website dashboard.     | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt-in prompt.     |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
+| [Laravel package](https://github.com/pushmix/laravel-web-notification) allows to include opt-in prompt with just one line of code and send web notifications from Laravel applications.   | Integrate with [WordPress](https://github.com/pushmix/wordpress-web-notifications) just with few clicks and push notifications from your website dashboard.   | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt-in prompt.     |
 | Subscription opt-in prompt in your templates  | Send web notifications from WordPress Dashboard   | JavaScript integration can also be performed via Google Tag Manager.  |
 | Send push notification messages from Laravel application  | Choose pages and posts to display opt-in prompt   |   |
-
+| [Laravel Web Notification Package](https://github.com/pushmix/wordpress-web-notifications)    | [WordPress Web Notifications Plugin](https://github.com/pushmix/wordpress-web-notifications)  |   |
 If you using Laravel Package or WordPress Plugin you can skip Installation section.
 
 
 **Service Worker**
 
-[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from.
+[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from. 
 
-For example `https://www.pushmix.co.uk/pm_service_worker.js`
+For example my website domain name is `pushmix.co.uk` than Service Worker must be accessible via this URL:
+`https://www.pushmix.co.uk/pm_service_worker.js`
 
 If you wish to place service worker file inside of any other folders on your server, fill free to do so. However please don't forget to update service worker URL path in the tracking code, see bellow.
 
