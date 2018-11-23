@@ -105,7 +105,6 @@ Integration with Pushmix service is simple and can be achieved using one of the 
 * JavaScript (see below)
 * [Web Push Notifications for Laravel](https://github.com/pushmix/laravel-web-notification)
 * [Web Push Notifications for WordPress](https://github.com/pushmix/wordpress-web-notifications)
-                                                                                                                                                                                       |
 
 If you using Laravel Package or WordPress Plugin you can skip Installation section.
 
