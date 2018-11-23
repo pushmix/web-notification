@@ -2,33 +2,33 @@
 
 [https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
-Pishmix is a web push notification service, aiming at effectively re-engaging website visitors with customized web notifications. Our service relies on Firebase Cloud Messaging cross-platform messaging solution. It's is free to register and use Pushmix service.
+Pushmix is a web push notification service, effectively re-engaging website visitors with customized web push notifications.
 
 You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://www.pushmix.co.uk).
 
-Features includes:
-* audience segmentation via topic subscription 
-* customised opt in prompt
-* real time user interactions in Google Analytics
-* custom notification icon and badge
-* action buttons with icons
-* notification logs
-* large image support
-* Laravel package
-* WordPress plugin
+* Features includes:
+* Audience segmentation via topic subscription
+* Customized opt-in prompt
+* Action buttons
+* Notification open and click stats
+* Customized notification icon and badge
+* Laravel Integration
+* WordPress Integration
+* Large image support
+* Real-time activity in Google Analytics
+* Notification Lifespan
 
-View all available [features](https://www.pushmix.co.uk/features) or see [documentation](https://www.pushmix.co.uk/docs) for more details.
 
 
 
 ## Requirements
-There are a few requirements must be met in order to uset this service:
+Following requirements must be met in order to use Pushmix service:
 
-* write access to the website files
-* website url must served via `HTTPS://` or run on `localhost` to display opt inn prompt
+* Pushmix Subscription ID
+* Website must be served via `HTTPS://` to display opt-in prompt
 
 
-Google Tag Manager can be used to include required JavaScript. See Google search results for articles that describes this process.
+You will need Subscription ID to use it. The Subscription ID is FREE and can be obtained from [pushmix.co.uk](https://www.pushmix.co.uk).
 
 
 
@@ -38,7 +38,7 @@ To use this service, you are required to create an account, the only details tha
 
 By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://www.pushmix.co.uk/terms), including our [Privacy Policy](https://www.pushmix.co.uk/privacy).
 
-Fastest way to sign up is login with Google or Facebook accounts - [Login](https://dash.pushmix.co.uk/login). Alternatively [Register](https://dash.pushmix.co.uk/register) new account by simply entering name, email addresses and password of your choice.
+The fastest way to sign up is login with Google or Facebook accounts - [Login](https://dash.pushmix.co.uk/login). Alternatively [Register](https://dash.pushmix.co.uk/register) new account by simply entering the name, email addresses and password of your choice.
 
 
 
@@ -49,15 +49,15 @@ Fastest way to sign up is login with Google or Facebook accounts - [Login](https
 
 **1. Details**
 
-In the dashboard click New Subscription and enter your website address where you wish visitors to subscribe for web notifications. Enter title and optional line of text to provide subscribers with more details what they subscribing for.
+In the dashboard click New Subscription and enter your website address where you wish visitors to subscribe for web push notifications. Enter a title and optional line of text to provide subscribers with more details what they subscribing for.
 
-All subscription details can be edited later in exception of website address.
+All subscription details can be edited later in exception of the website address.
 
-To review opt in prompt click Preview button, continue entering details and see changes in real time.
+To review opt-in prompt click Preview button, continue entering details and see changes in real time.
 
-All subscription details can be changed at later time in exception of website address. If you have added website address wrong simply delete subscription and start again.
+All subscription details can be changed at a later time in exception of the website address. If you have added website address wrong simply delete subscription and start again.
 
-User can create more than one website subscription.
+The user can create more than one website subscription.
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_subscription_details_1.png "1.Details")
 
@@ -68,9 +68,9 @@ You can review opt in prompt by pressing `Preview` button, continue entering det
 
 **2. Topics**
 
-Topics are important elements of subscription and allow users to subscribe only for notifications of specific types i.e. Special Offers .
+Topics are important elements of subscription and allow users to subscribe only for notifications of specific types i.e. Special Offers.
 
-Topics allows you to segment audience and target only those users who have subscribed to a specific topic. For example send notification only to those users who have opted in for Special Offers.
+Topics allow you to segment audience and target only those users who have subscribed to a specific topic. For example, send notification only to those users who have opted in for Special Offers.
 
 However topics are optional and you can skip this step.
 
@@ -83,15 +83,15 @@ To review opt in prompt click Preview button, continue entering details and see 
 
 Notification icon, badge and Google Analytics tracking id, all these parameters are optional.
 
-Icon is the small image that displayed next to the title and the body if the notification. Recommended icon image dimensions is 192x192 pixels.
+The icon is the small image that displayed next to the title and the body if the notification. Recommended icon image dimensions are 192x192 pixels.
 
-Badge is monochrome icon that used to provide more information to the user about where the notification sender. At the time of writing the badge is only used on Chrome for Android. Some browsers only allow icon and badge images to be served over HTTP.
+The badge is a monochrome icon that used to provide more information to the user about where the notification sender. At the time of writing the badge is only used on Chrome for Android. Some browsers only allow icon and badge images to be served over HTTP.
 
-Both of these fields are optional, however if the icon and badge parameters are not provided, default Pushmix icons will be used.
+Both of these fields are optional, however, if the icon and badge parameters are not provided, default Pushmix icons will be used.
 
-Track user interactions in real time with Google Analytics Event Tracking. Enter your GA Tracking Id to receive web notification views and action button click events.
+Track user interactions in real time with Google Analytics Event Tracking. Enter your GA Tracking Id to receive web notification views and action button clicks events.
 
-Press Submit to create subscription, if all mandatory fields supplied correctly instructions on how to embed subscription code will be displayed.
+Press Submit to create a subscription if all mandatory fields supplied correctly instructions on how to embed subscription code will be displayed.
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_subscription_extra_1.png "Extra")
 
@@ -100,28 +100,27 @@ Press Submit to create subscription, if all mandatory fields supplied correctly 
 
 ### Installation
 
-Currently two options are available to integrate Pushmix service with your website.
+Integration with Pushmix service is simple and can be achieved using one of the following methods:
 
-|                                                                                         Laravel                                                                                         |                                                                          WordPress                                                                          |                                                                                         JavaScript                                                                                        |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Laravel package](https://github.com/pushmix/laravel-web-notification) allows to include opt-in prompt with just one line of code and send web notifications from Laravel applications. | Integrate with [WordPress](https://github.com/pushmix/wordpress-web-notifications) just with few clicks and push notifications from your website dashboard. | JavaScript integration is as simple as copy and paste a few lines of code to the footer of the webpage. Including subscription code in the webpage will trigger to display opt-in prompt. |
-| Subscription opt-in prompt in your templates                                                                                                                                            | Send web notifications from WordPress Dashboard                                                                                                             | JavaScript integration can also be performed via Google Tag Manager.                                                                                                                      |
-| Send push notification messages from Laravel application                                                                                                                                | Choose pages and posts to display opt-in prompt                                                                                                             |                                                                                                                                                                                           |
-
+* JavaScript (see below)
+* [Web Push Notifications for Laravel](https://github.com/pushmix/laravel-web-notification)
+* [Web Push Notifications for WordPress](https://github.com/pushmix/wordpress-web-notifications)
+                                                                                                                                                                                       |
 
 If you using Laravel Package or WordPress Plugin you can skip Installation section.
 
 
 
+### JavaScript Installation
 
 **Service Worker**
 
-[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from. 
+[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of the public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from. 
 
-For example my website domain name is `pushmix.co.uk` than Service Worker must be accessible via this URL:
+For example, my website domain name is `pushmix.co.uk` than Service Worker must be accessible via this URL:
 `https://www.pushmix.co.uk/pm_service_worker.js`
 
-If you wish to place service worker file inside of any other folders on your server, fill free to do so. However please don't forget to update service worker URL path in the tracking code, see bellow.
+If you wish to place service worker file inside of any other folders on your server, fill free to do so. However please don't forget to update the service worker URL path in the tracking code, see below.
 
 See Google [search results](https://www.google.co.uk/search?safe=strict&ei=eC7GW_2iGszCgAaksp6QAQ&q=service+workers&oq=service+workes&gs_l=psy-ab.12...0.0..15074...0.0..0.0.0.......0......gws-wiz.NGcT7bDgRlo) for details and use of service workers.
 
@@ -129,7 +128,7 @@ See Google [search results](https://www.google.co.uk/search?safe=strict&ei=eC7GW
 
 **Subscription Code**
 
-Copy subscription code from dashboard and paste it at the bottom of the web page to start building your audience. You can add subscription code to more than one page. When webpage is loaded subscription code trigger the opt in prompt to be displayed. In the event when web browser is not supported, opt in prompt will not be displayed.
+Copy subscription code from the dashboard and paste it at the bottom of the web page to start building your audience. You can add subscription code to more than one page. When a webpage is loaded subscription code trigger the opt-in prompt to be displayed. In the event when the web browser is not supported, an opt-in prompt will not be displayed.
 
 The subscription code can also be added via Google Tag Manager, please see Google [search results](https://www.google.co.uk/search?q=Adding+Custom+JavaScript+to+Your+Website+Using+Google+Tag+Manager&oq=Adding+Custom+JavaScript+to+Your+Website+Using+Google+Tag+Manager) for articles that describes this process.
 
@@ -152,24 +151,22 @@ The subscription code can also be added via Google Tag Manager, please see Googl
 </script> 
 ```
 
-By default subscription code is set to load opt in prompt stright after the web page is loaded. This behavior can be quickly adjusted and tailored to your own needs, for example to display opt in prompt on click event.
+By default, subscription code is set to load opt-in prompt straight after the web page is loaded. This behaviour can be quickly adjusted and tailored to your own needs, for example, to display an opt-in prompt on click event.
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Preview opt in prompt")
 
-Visit the section of your website where you have added the subscription code to ensure the opt in prompt is working as expected. Any changes to the subscription details applied on the dashboard will have immediate effect in the opt in prompt, web page reload may be required.
+Visit the section of your website where you have added the subscription code to ensure the opt-in prompt is working as expected. Any changes to the subscription details applied in the dashboard will have an immediate effect in the opt-in prompt, web page reload may be required.
 
-Opt in prompt can be used to subscribe for push notifications as well as toggle subscription states or unsubscribe from further notifications.
-
-Notification scription is based on Web Browser token and one device can subscribe multiply times.
+An opt-in prompt can be used to subscribe for web push notifications as well as toggle subscription states or unsubscribe from further notifications.
 
 
 
 
-### Sending Notifications
+### Sending Web Push Notifications
 
-Dashboard displays one or more of your subscriptions summary. Press Push Notification button at the bottom of subscription card.
+The dashboard displays one or more of your subscriptions summary. Press `Push Notification` button at the bottom of subscription card.
 
-There are three steps that you will need to go through to prepare notification message: Select Audience, Enter Content and Actions.
+There are three steps that you will need to go through to prepare notification message: `Select Audience`, `Enter Content` and `Actions`.
 
 
 
@@ -178,19 +175,18 @@ There are three steps that you will need to go through to prepare notification m
 
 **Audience**
 
-From the dropdown select subscribers Audience you would like to target, by default all subscribers are selected. Number in the brackets indicating total number of subscribers for each topic.
+From the drop-down select subscriber's Audience, you would like to target, by default all subscribers are selected. The number in the brackets indicating the total number of subscribers for each topic.
 
-If you have specified additional topics, they also be available for selection from dropdown box. Only one audience group can be selected at a time.
+If you have specified additional topics, they also are available for selection from the drop-down box. Only one audience group can be selected at a time.
 
-Priority dropdown consists of two choices High and Normal, High is selected by default. This feature regulate how push notification being delivered.
+Priority drop-down consists of two choices `High` and `Normal`, High is selected by default. This feature regulates how web push notifications being delivered.
 
-High priority messages attempted to be delivered immediately.
+`High` priority messages attempted to be delivered immediately.
 
-Normal priority messages won't open network connections on a sleeping device, and message delivery may be delayed to conserve battery.
+`Normal` priority messages won't open network connections on a sleeping device, and message delivery may be delayed to conserve battery.
 
-Maximum notification lifespan of a message correspond to the maximum period of time for which message delivery will be attempted, 1 Hour is default choice. This feature helps to prevent from delivering messages with content that no longer relevant.
+Maximum notification lifespan of a message corresponds to the maximum period of time for which message delivery will be attempted, `1 Hour` is default choice. This feature helps to prevent from delivering messages with content that no longer relevant.
 
-Consider subscriber device is turned off and you sending a message containing discount code that expire today at 6pm. Subscriber switch on it's device on the following day to receive push notification with discount code that can't be used.
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_1.png "Dashboard")
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_2.png "Audience")
@@ -200,7 +196,7 @@ Consider subscriber device is turned off and you sending a message containing di
 
 **Notification Title, Body and URL**
 
-Enter notification Title and Body, keep it brief. In the URL field enter valid website address, when user clicks or press on notification this URL will be loaded in the web browser.
+Enter notification Title and Body, keep it brief. In the URL field enter a valid website address, when a user clicks or press on notification this URL will be loaded in the web browser.
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_2.png "2. Content")
 
@@ -208,12 +204,12 @@ Enter notification Title and Body, keep it brief. In the URL field enter valid w
 
 #### 2. Actions
 
-You can define up to two action buttons to be displayed with a notification. All fields are optional, however if you choose to specify Action Title than Action URL is required.
+You can define up to two action buttons to be displayed with a notification. All fields are optional, however, if you choose to specify Action Title than Action URL is required.
 
-Additionally you can select an icon from dropdown list to displayed on the button. Please not action icons may not be displayed.
+Additionally, you can select an icon from the drop-down list to display on the button. Please note action icons may not be displayed.
 
 **Image URL**
-Large image can be included in notification body, recommended width of 1350px or more would be a good bet. Simply enter valid image URL.
+The large image can be included in the notification body, recommended width of 1350px or more would be a good bet. Simply enter valid image URL.
 
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_4.png "3. Actions")
@@ -221,11 +217,11 @@ Large image can be included in notification body, recommended width of 1350px or
 
 **Testing**
 
-It's always good to push test notification and preview results before sending message to your subscribers, simply press `Push Test` button. If you web browser supports push notifications you will see one shortly.
+Press `Push Test` button. If your web browser supports web push notifications you will recive one shortly.
 
-Once you happy with test press Push Notification button and your notifications will start being dispatched. Check your Google Analytics Real-Time Events section to see user interactions with notification you just send.
+Once you happy with the test press `Push Notification` button and your web push notifications will start being dispatched. Check your Google Analytics Real-Time Events section to see user interactions with notification you just send.
 
-In case when your web browser is not compatible with push notifications you can still send the message by pressing Push Notification button to selected subscribers audience.
+In the case when your web browser is not compatible with push notifications you can still send the message by pressing `Push Notification` button to selected subscribers audience.
 
 | Windows Chrome  69| 
 | ------------- |
@@ -262,7 +258,7 @@ In case when your web browser is not compatible with push notifications you can 
 
 ### Logs
 
-Eash subscription card has it's own list of actions, Logs is one of them.
+Eash subscription card has its own list of actions, Logs is one of them.
 
 Logs keep track of all notifications you have dispatched and consists of two available views: Summary and Details.
 
@@ -291,7 +287,7 @@ Detail view display information about the devices that received this notificatio
 * Postcode
 * Country
 
-The geographical device details are optined during interaction with opt in prompt and may not represent current device location.
+The geographical device details are obtained during interaction with opt-in prompt and may not represent the current device location.
 
 There are also five graphs and map are available that visualize above information.
 
