@@ -4,7 +4,7 @@
 
 Pushmix is effective and dependable web service helping to reconnect with your audience through customised web push notifications.
 
-`  The service is FREE to register and use.  `
+> The service is FREE to register and use. 
 
 ### Requirements
 Following requirements must be met in order to use Pushmix service:
