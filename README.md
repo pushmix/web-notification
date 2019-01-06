@@ -418,7 +418,7 @@ return json_decode($result);
 ```javascript
 const payloadData = {
     // Required Parameters
-    'key_id'            : 'YOUR_SUBSCRIPTION_ID', // Subscription ID
+    'key_id'            : 'SUBSCRIPTION_ID', // Subscription ID
     'topic'             : 'all', // 'all' or topic id from /api/get/topics call see below
     'title'             : 'Hello',
     'body'              : 'Welcome to Pushmix!',
@@ -473,7 +473,7 @@ var https       = require('https');
 
 // Build the post string from an object
 var post_data = querystring.stringify({
-    'key_id'            : 'YOUR_SUBSCRIPTION_ID', // Subscription ID
+    'key_id'            : 'SUBSCRIPTION_ID', // Subscription ID
     'topic'             : 'all', // 'all' or topic id from /api/get/topics call see below
     'title'             : 'Hello',
     'body'              : 'Welcome to Pushmix!',
@@ -523,7 +523,7 @@ req.end();
 **curl**
 
 ```javascript
-curl -d "key_id=YOUR_SUBSCRIPTION_ID&topic=all&title=Hello&body=Welcome%20to%20Pushmix%21&default_url=https%3A%2F%2Fwww.pushmix.co.uk" 'https://www.pushmix.co.uk/api/push'
+curl -d "key_id=SUBSCRIPTION_ID&topic=all&title=Hello&body=Welcome%20to%20Pushmix%21&default_url=https%3A%2F%2Fwww.pushmix.co.uk" 'https://www.pushmix.co.uk/api/push'
 
 ```
 **Response**
