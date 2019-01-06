@@ -280,21 +280,45 @@ Once you happy with test press *Push Notification button* and your notifications
 
 ### Logs
 
-Eash subscription card has its own list of actions, Logs is one of them.
+Each subscription card has the list of actions, *Logs* is one of them. The *Logs* keep track of all notifications you have send, open & click through rate and many more.
 
-Logs keep track of all notifications you have dispatched and consists of two available views: Summary and Details.
+**Subscription and Notification Stats**
 
-**Summary**
+* Total Dispatched Notifications
+* Open Notifications
+* Notification Clicks
+* Notification Details List
+* Average Open Rate
+* Average Click Rate
 
-Summary view display all notification campaigns that have been sent out in descending order, including:
 
-* Notification Title
-* Audience
-* Number of Successfully delivered notifications
-* Number of Failed notifications
-* Notification Dispatched date
+**Notification Campaign Stats**
 
-All notification summary details can be exported in CSV.
+* Delivered Notification
+* Failed Notification
+* Notification Clicks
+* Open Notification
+* Average Open Rate
+* Average Click Rate
+* Subscriber Device Information
+* Subscriber GEO Location
+* Grahs & Map
+* Re-Send Notification
+* Re-Send to not-engaged subscribers
+
+The section consists of a subscription summary, that displays the total number of dispatched notifications, the total number of open notifications and average open rate as well as the total number of notification clicks and average click-through rate.
+
+The summary section also provides the list of all notifications that have been sent, including notification title, audience notification has been sent to, the number of successfully delivered and failed notifications, date and time notification was dispatched.
+
+Drill-down to view selected notification details, including open and click rates, device type, operating system, browser and it's the version, device city, postcode and county. Beautiful graphs and Google Map will help to visualise collected information.
+
+For your convenience re-send notification to the same subscribers or choose to re-send notification for the users who did not engage in the first notification dispatch.
+
+` The geographical device details are obtained during interaction with opt-in prompt and/or notification and may not represent the current device location. `
+
+![alt text](https://pushmix.github.io/web-notification/img/logs_summary_22.png "Subscription Summary Stats")
+![alt text](https://pushmix.github.io/web-notification/img/logs_details_22.png "Notification Stats")
+![alt text](https://pushmix.github.io/web-notification/img/logs_details_222.png "Graphs")
 
 
 **Details**
