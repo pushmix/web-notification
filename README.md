@@ -43,6 +43,8 @@ By creating an account and using our service you agree to be bound with our [Ter
 * **01 - Sign Up**
 > Create an account and login to your dashboard.
 
+* **02 - Create Subscription**
+> Enter opt-in prompt _Title_ and _Description_, add up to two optional _Topics_ to segment your audience, provide optional _Icon URL_ and _Google Analytics Tracking ID_
 
 
 ### Creating subscription
