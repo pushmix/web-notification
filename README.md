@@ -226,7 +226,7 @@ Priority drop-down consists of two choices *High* and *Normal*
 
 Enter notification *Title* and *Body*, keep it brief. In the *URL* field enter a valid website address, when a user clicks or press on notification this *URL* will be loaded in the web browser.
 
-![alt text](https://pushmix.github.io/web-notification/img/push_notification_2.png "2. Content")
+![alt text](https://pushmix.github.io/web-notification/img/push_notification_3.png "2. Content")
 
 
 
@@ -289,6 +289,10 @@ Each subscription card has the list of actions, *Logs* is one of them. The *Logs
 
 **Subscription and Notification Stats**
 
+The section consists of a subscription summary, that displays the total number of dispatched notifications, the total number of open notifications and average open rate as well as the total number of notification clicks and average click-through rate.
+
+The summary section also provides the list of all notifications that have been sent, including notification title, audience notification has been sent to, the number of successfully delivered and failed notifications, date and time notification was dispatched.
+
 * Total Dispatched Notifications
 * Open Notifications
 * Notification Clicks
@@ -296,8 +300,14 @@ Each subscription card has the list of actions, *Logs* is one of them. The *Logs
 * Average Open Rate
 * Average Click Rate
 
+![alt text](https://pushmix.github.io/web-notification/img/logs_summary_22.png "Subscription Summary Stats")
+
 
 **Notification Campaign Stats**
+
+Drill-down to view selected notification details, including open and click rates, device type, operating system, browser and it's the version, device city, postcode and county. Beautiful graphs and Google Map will help to visualise collected information.
+
+For your convenience re-send notification to the same subscribers or choose to re-send notification for the users who did not engage in the first notification dispatch.
 
 * Delivered Notification
 * Failed Notification
@@ -311,19 +321,10 @@ Each subscription card has the list of actions, *Logs* is one of them. The *Logs
 * Re-Send Notification
 * Re-Send to not-engaged subscribers
 
-The section consists of a subscription summary, that displays the total number of dispatched notifications, the total number of open notifications and average open rate as well as the total number of notification clicks and average click-through rate.
-
-The summary section also provides the list of all notifications that have been sent, including notification title, audience notification has been sent to, the number of successfully delivered and failed notifications, date and time notification was dispatched.
-
-Drill-down to view selected notification details, including open and click rates, device type, operating system, browser and it's the version, device city, postcode and county. Beautiful graphs and Google Map will help to visualise collected information.
-
-For your convenience re-send notification to the same subscribers or choose to re-send notification for the users who did not engage in the first notification dispatch.
+![alt text](https://pushmix.github.io/web-notification/img/logs_details_22.png "Notification Stats")
 
 > The geographical device details are obtained during interaction with opt-in prompt and/or notification and may not represent the current device location.
 
-
-![alt text](https://pushmix.github.io/web-notification/img/logs_summary_22.png "Subscription Summary Stats")
-![alt text](https://pushmix.github.io/web-notification/img/logs_details_22.png "Notification Stats")
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details_222.png "Graphs")
 
 
