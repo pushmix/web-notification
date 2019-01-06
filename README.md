@@ -11,7 +11,7 @@ Following requirements must be met in order to use Pushmix service:
 
 * Website must be served via `HTTPS://`
 
-` Don't have SSL, check out [Cloudflare](https://dash.cloudflare.com/sign-up) `
+> Don't have SSL, check out [Cloudflare](https://dash.cloudflare.com/sign-up)
 
 You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://dash.pushmix.co.uk/login).
 
@@ -129,7 +129,7 @@ Following methods are available to integrate Pushmix service:
 
 If you using Laravel Package or WordPress Plug-in you can skip Installation section.
 
-`  For notifications open rate and click through stats you will need to login to Pushmix Dashboard. `
+> For notifications open rate and click through stats you will need to login to Pushmix Dashboard.
 
 **Service Worker**
 
@@ -168,10 +168,15 @@ Copy subscription code from the dashboard and paste it at the bottom of the web 
 </script>
 ```
 
-` Include Subscription Code using Google Tag Manager [Custom HTML tag](https://support.google.com/tagmanager/answer/6107167?hl=en). `
+> Include Subscription Code using Google Tag Manager [Custom HTML tag](https://support.google.com/tagmanager/answer/6107167?hl=en).
+
+
+
 
 
 **Opt-in Prompt**
+
+
 ![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Preview opt-in prompt")
 
 Visit the section of your website where you have added the subscription code to ensure the opt-in prompt is working as expected. Any changes to the subscription details applied in the Pushmix Dashboard will have an immediate effect, web page reload may be required.
@@ -198,7 +203,7 @@ There are three steps that you will need to go through to prepare notification m
 
 From the drop-down select subscriber's Audience, you would like to target, by default all subscribers are selected. The number in the brackets indicating the total number of subscribers for each topic*.
 
-`  *Number of subscribers only available in the Pushmix Dashboard. `
+> *Number of subscribers only available in the Pushmix Dashboard.
 
 If you have specified additional topics, they are available from the drop-down box. Only one audience group can be selected at a time.
 
@@ -314,9 +319,8 @@ Drill-down to view selected notification details, including open and click rates
 
 For your convenience re-send notification to the same subscribers or choose to re-send notification for the users who did not engage in the first notification dispatch.
 
-```
-The geographical device details are obtained during interaction with opt-in prompt and/or notification and may not represent the current device location.
-```
+> The geographical device details are obtained during interaction with opt-in prompt and/or notification and may not represent the current device location.
+
 
 ![alt text](https://pushmix.github.io/web-notification/img/logs_summary_22.png "Subscription Summary Stats")
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details_22.png "Notification Stats")
