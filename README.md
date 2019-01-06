@@ -2,45 +2,46 @@
 
 [https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
-Pushmix is a web push notification service, effectively re-engaging website visitors with customized web push notifications.
+Pushmix is effective and dependable web service helping to reconnect with your audience through customised web push notifications.
 
-You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://www.pushmix.co.uk).
-
-* Features includes:
-* Audience segmentation via topic subscription
-* Customized opt-in prompt
-* Action buttons
-* Notification open and click stats
-* Customized notification icon and badge
-* Laravel Integration
-* WordPress Integration
-* Large image support
-* Real-time activity in Google Analytics
-* Notification Lifespan
-
-
-
+`  The service is FREE to register and use.  `
 
 ## Requirements
 Following requirements must be met in order to use Pushmix service:
 
-* Pushmix Subscription ID
-* Website must be served via `HTTPS://` to display opt-in prompt
+* Website must be served via `HTTPS://`
 
 
-You will need Subscription ID to use it. The Subscription ID is FREE and can be obtained from [pushmix.co.uk](https://www.pushmix.co.uk).
+You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://dash.pushmix.co.uk/login).
 
+## Features:
+* Audience segmentation via topic subscription
+* Customised opt-in prompt
+* Action buttons
+* Open and Click Through Rate Stats
+* Integration with Google Analytics
+* Customised notification icon and badge
+* REST API
+* Laravel and WordPress integration
+* Large image support
+* Notification Lifespan
+* Subscriber device information
+* Subscriber device GEO location
 
 
 
 ## Getting Started
-To use this service, you are required to create an account, the only details that are required: name and email address. It's is free to register and use Pushmix service.
+This documentation designed to help you to start using the Pushmix service and send web notification messages just in few minutes, no specific technical skills are required.
+
+For users wishing to have more control and send notifications directly from your own application checkout our [Laravel package](https://www.pushmix.co.uk/docs/laravel-package), [WordPress plug-in](https://www.pushmix.co.uk/docs/wordpress-plugin) or [API section](https://www.pushmix.co.uk/docs/api).
 
 By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://www.pushmix.co.uk/terms), including our [Privacy Policy](https://www.pushmix.co.uk/privacy).
 
-The fastest way to sign up is login with Google or Facebook accounts - [Login](https://dash.pushmix.co.uk/login). Alternatively [Register](https://dash.pushmix.co.uk/register) new account by simply entering the name, email addresses and password of your choice.
 
+# Workflow
 
+* 01 - Sign Up
+... Create an account and login to your dashboard.
 
 
 
@@ -114,7 +115,7 @@ If you using Laravel Package or WordPress Plugin you can skip Installation secti
 
 **Service Worker**
 
-[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of the public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from. 
+[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of the public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from.
 
 For example, my website domain name is `pushmix.co.uk` than Service Worker must be accessible via this URL:
 `https://www.pushmix.co.uk/pm_service_worker.js`
@@ -147,7 +148,7 @@ The subscription code can also be added via Google Tag Manager, please see Googl
         var el = document.getElementsByTagName('script')[0];
         el.parentNode.insertBefore(block, el);
     })();  
-</script> 
+</script>
 ```
 
 By default, subscription code is set to load opt-in prompt straight after the web page is loaded. This behaviour can be quickly adjusted and tailored to your own needs, for example, to display an opt-in prompt on click event.
@@ -222,35 +223,35 @@ Once you happy with the test press `Push Notification` button and your web push 
 
 In the case when your web browser is not compatible with push notifications you can still send the message by pressing `Push Notification` button to selected subscribers audience.
 
-| Windows Chrome  69| 
+| Windows Chrome  69|
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_windows_chrome_69.png "Windows Chrome 69")|
 
-| Windows Firefox  63| 
+| Windows Firefox  63|
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_windows_ff_63.png "Windows Firefox 63")|
 
 
-| Linux Firefox 62  | 
+| Linux Firefox 62  |
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_firefox_62.png "Linux Firefox 62")|
 
-| Linux Chromium 69 | 
+| Linux Chromium 69 |
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_chromium_69.png "Linux Chromium 69")|
 
 
-| Linux Chrome 69 | 
+| Linux Chrome 69 |
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_chrome_69.png "Linux Chrome 69")|
 
 
-| Samsung Chrome 70  | 
+| Samsung Chrome 70  |
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_samsung_chrome_70.png "Linux Chrome 70")|
 
 
-| Samsung Internet 7  | 
+| Samsung Internet 7  |
 | ------------- |
 | ![alt text](https://pushmix.github.io/web-notification/img/notification_example_samsung_internet_7.png "Linux Internet 7")|
 
@@ -299,4 +300,4 @@ There are also five graphs and map are available that visualize above informatio
 If you come across any issues please report them [here](https://github.com/pushmix/web-notification/issues).
 
 ### Security Vulnerabilities
-If you discover a security vulnerability please send an e-mail to support@pushmix.co.uk. 
+If you discover a security vulnerability please send an e-mail to support@pushmix.co.uk.
