@@ -42,7 +42,7 @@ By creating an account and using our service you agree to be bound with our [Ter
 
 * 01 - Sign Up
 
-...Create an account and login to your dashboard.
+⋅⋅⋅Create an account and login to your dashboard.
 
 
 
