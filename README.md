@@ -321,21 +321,60 @@ For your convenience re-send notification to the same subscribers or choose to r
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details_222.png "Graphs")
 
 
-**Details**
+### API
 
-Detail view display information about the devices that received this notification including:
+**API Endpoint**
+All API URLs listed in this documentations are relative to `https://www.pushmix.co.uk/api/`
 
-* Device Type (i.e Desktop)
-* Device Operating System (i.e Windows)
-* Device Web Browser (i.e Chrome)
-* Device Web Browser Version (i.e 69.0)
-* Geographical City of the device
-* Postcode
-* Country
+All methods are accessed via `https://pushmix.co.uk/api/METHOD-NAME`
 
-The geographical device details are obtained during interaction with opt-in prompt and may not represent the current device location.
+The response data encoded in JSON format. Any none-200 HTTP response code are an error, the returned data will contain more information.
 
-There are also five graphs and map are available that visualize above information.
+
+**Send Web Push Notification**
+API end point: `https://www.pushmix.co.uk/api/push`
+
+Request Method: `POST`
+
+Accepted parameters:
+```javascript
+// Required Parameters
+'key_id'            => 'YOUR SUBSCRIPTION_ID', // Subscription ID
+'topic'             => 'all', // 'all' or topic id from /api/get/topics call see below
+'title'             => 'Hello',
+'body'              => 'Welcome to Pushmix!',
+'default_url'       => 'https://www.pushmix.co.uk',
+
+
+// Optional Parameters
+
+// Notification Life Span
+// this parameter must be a duration from 0 to 2,419,200 seconds
+'time_to_live'      => '3600', // 1 hour
+
+// Message Priority
+'priority'          => 'high', // or normal
+
+// Notification Icon URL
+'icon'      => 'https://www.pushmix.co.uk/media/favicons/apple-touch-icon.png',
+
+// Notification Badge Icon URL
+'badge'     => 'https://www.pushmix.co.uk/media/favicons/pm_badge_v2.png',
+
+ // Large Image URL
+'image'     => 'https://www.pushmix.co.uk/media/photos/photo16.jpg',
+
+// Action Button title
+'action_title_one'  => 'Features',
+// Action URL - required with action_url_one
+'action_url_one'    => 'https://www.pushmix.co.uk/features',
+
+// Action Button title
+'action_title_two'  => 'Documentation',
+// Action URL - required with action_url_two
+'action_url_two'    => 'https://www.pushmix.co.uk/docs',
+
+```
 
 ![alt text](https://pushmix.github.io/web-notification/img/logs_summary.png "Logs Summary")
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details.png "Logs Details")
