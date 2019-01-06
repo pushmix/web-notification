@@ -334,11 +334,15 @@ All methods are accessed via `https://pushmix.co.uk/api/METHOD-NAME`
 The response data encoded in JSON format. Any none-200 HTTP response code are an error, the returned data will contain more information.
 
 
+
 **Send Web Push Notification**
+
+
 
 API end point: `https://www.pushmix.co.uk/api/push`
 
 Request Method: `POST`
+
 
 Accepted parameters:
 ```javascript
@@ -539,13 +543,19 @@ curl -d "key_id=SUBSCRIPTION_ID&topic=all&title=Hello&body=Welcome%20to%20Pushmi
 
 
 
+
+
 **Retrieve Subscription Topics**
+
+
 
 API end-point: `https://www.pushmix.co.uk/api/get/topics`
 
 Request Method: `POST`
 
 Required parameter: `SUBSCRIPTION_ID`
+
+
 
 **PHP**
 
