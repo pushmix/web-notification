@@ -314,7 +314,9 @@ Drill-down to view selected notification details, including open and click rates
 
 For your convenience re-send notification to the same subscribers or choose to re-send notification for the users who did not engage in the first notification dispatch.
 
-` The geographical device details are obtained during interaction with opt-in prompt and/or notification and may not represent the current device location. `
+```
+The geographical device details are obtained during interaction with opt-in prompt and/or notification and may not represent the current device location.
+```
 
 ![alt text](https://pushmix.github.io/web-notification/img/logs_summary_22.png "Subscription Summary Stats")
 ![alt text](https://pushmix.github.io/web-notification/img/logs_details_22.png "Notification Stats")
@@ -324,6 +326,7 @@ For your convenience re-send notification to the same subscribers or choose to r
 ### API
 
 **API Endpoint**
+
 All API URLs listed in this documentations are relative to `https://www.pushmix.co.uk/api/`
 
 All methods are accessed via `https://pushmix.co.uk/api/METHOD-NAME`
@@ -332,6 +335,7 @@ The response data encoded in JSON format. Any none-200 HTTP response code are an
 
 
 **Send Web Push Notification**
+
 API end point: `https://www.pushmix.co.uk/api/push`
 
 Request Method: `POST`
@@ -376,9 +380,317 @@ Accepted parameters:
 
 ```
 
-![alt text](https://pushmix.github.io/web-notification/img/logs_summary.png "Logs Summary")
-![alt text](https://pushmix.github.io/web-notification/img/logs_details.png "Logs Details")
-![alt text](https://pushmix.github.io/web-notification/img/logs_details_2.png "Logs Details")
+
+**PHP**
+
+```php
+$data = [
+
+    // Required Parameters
+    'key_id'            => 'YOUR SUBSCRIPTION_ID', // Subscription ID
+    'topic'             => 'all', // 'all' or topic id from /api/get/topics call see below
+    'title'             => 'Hello',
+    'body'              => 'Welcome to Pushmix!',
+    'default_url'       => 'https://www.pushmix.co.uk',
+
+];
+
+$ch = curl_init( 'https://www.pushmix.co.uk/api/push' );
+
+# Setup request to send json via POST.
+curl_setopt( $ch, CURLOPT_POSTFIELDS, json_encode( $data ) );
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+
+# Return response instead of printing.
+curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+
+# Send request.
+$result = curl_exec($ch);
+curl_close($ch);
+
+
+return json_decode($result);
+```
+
+
+**JavaScript**
+
+```javascript
+const payloadData = {
+    // Required Parameters
+    'key_id'            : 'YOUR_SUBSCRIPTION_ID', // Subscription ID
+    'topic'             : 'all', // 'all' or topic id from /api/get/topics call see below
+    'title'             : 'Hello',
+    'body'              : 'Welcome to Pushmix!',
+    'default_url'       : 'https://www.pushmix.co.uk',
+};
+
+  // Format data into URI
+  const payloadString = Object.keys(payloadData)
+  .filter(function(key) {
+    return payloadData[key];
+  })
+  .map(function(key) {
+    return key + '=' + encodeURIComponent(payloadData[key]);
+  })
+  .join('&');
+
+
+fetch('https://www.pushmix.co.uk/api/push', {
+  method: 'POST',
+  body:payloadString,
+  headers:{
+      "Content-Type": "application/x-www-form-urlencoded",
+   }
+})
+.then(res => res.json())
+.then(response => {
+
+    // contains error
+    if(response.hasOwnProperty("error")){
+        throw new Error(response.error);
+    }
+
+    // response object
+    console.log(response);
+
+
+    } )
+.catch(function(error){
+  // catch and display an error
+  console.log(error);
+});
+```
+
+
+**Node.js**
+
+```javascript
+var express     = require('express');
+var router      = express.Router();
+var querystring = require('querystring');
+var https       = require('https');
+
+// Build the post string from an object
+var post_data = querystring.stringify({
+    'key_id'            : 'YOUR_SUBSCRIPTION_ID', // Subscription ID
+    'topic'             : 'all', // 'all' or topic id from /api/get/topics call see below
+    'title'             : 'Hello',
+    'body'              : 'Welcome to Pushmix!',
+    'default_url'       : 'https://www.pushmix.co.uk',
+})
+
+
+// HTTP Request options
+var post_options = {
+    host: 'www.pushmix.co.uk',
+    port: '443',
+    path: '/api/get/topics',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Length': Buffer.byteLength(post_data)
+  }
+};
+
+var response_data = '';
+var req = https.request(post_options, (res) => {
+
+    res.setEncoding('utf8');
+    res.on('data', (d) => {
+        response_data += d;
+    });
+
+
+    res.on('end', () => {
+      // do something with your response object
+      console.log(response_data);
+     });
+
+});
+
+// catch an error response
+req.on('error', (e) => {
+    console.error(e);
+});
+
+//send request witht the post_data form
+req.write(post_data);
+req.end();
+
+```
+
+**curl**
+
+```javascript
+curl -d "key_id=YOUR_SUBSCRIPTION_ID&topic=all&title=Hello&body=Welcome%20to%20Pushmix%21&default_url=https%3A%2F%2Fwww.pushmix.co.uk" 'https://www.pushmix.co.uk/api/push'
+
+```
+**Response**
+
+```javascript
+// /api/push - response
+  {succes: true}
+
+
+  // Error response
+  {error:"Error details message"}
+```
+
+
+
+**Retrieve Subscription Topics**
+
+API end-point: `https://www.pushmix.co.uk/api/get/topics`
+
+Request Method: `POST`
+
+Required parameter: `SUBSCRIPTION_ID`
+
+**PHP**
+
+```php
+$ch = curl_init( 'https://www.pushmix.co.uk/api/get/topics' );
+
+# Setup request to send json via POST.
+curl_setopt( $ch, CURLOPT_POSTFIELDS, json_encode( ['subscription_id' => 'SUBSCRIPTION_ID'] ) );
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+
+# Return response instead of printing.
+curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+
+# Send request.
+$result = curl_exec($ch);
+curl_close($ch);
+
+// do something with your response
+return json_decode($result);
+```
+
+```javascript
+const payloadData = {
+  // Subscription ID
+  subscription_id: 'SUBSCRIPTION_ID',
+};
+
+  // Format data into URI
+  const payloadString = Object.keys(payloadData)
+  .filter(function(key) {
+    return payloadData[key];
+  })
+  .map(function(key) {
+    return key + '=' + encodeURIComponent(payloadData[key]);
+  })
+  .join('&');
+
+// make an API call
+fetch('https://www.pushmix.co.uk/api/get/topics', {
+  method: 'POST',
+  body:payloadString,
+  headers:{
+      "Content-Type": "application/x-www-form-urlencoded",
+   }
+})
+.then(res => res.json())
+.then(response => {
+
+    // contains error
+    if(response.hasOwnProperty("error")){
+        throw new Error(response.error);
+    }
+
+    // your response - array of subscription topics
+    console.log(response);
+
+
+    } )
+.catch(function(error){
+  // catch and display an error
+  console.log(error);
+});
+
+```
+
+
+**Node.js**
+
+```javascript
+var express     = require('express');
+var router      = express.Router();
+var querystring = require('querystring');
+var https       = require('https');
+
+  // Build the post string from an object
+    var post_data = querystring.stringify({
+      subscription_sid: 'SUBSCRIPTION_ID'
+    })
+
+
+  // An object of options to indicate where to post to
+  var post_options = {
+      host: 'www.pushmix.co.uk',
+      port: '443',
+      path: '/api/get/topics',
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Length': Buffer.byteLength(post_data)
+      }
+  };
+
+    var response_data = '';
+    var req = https.request(post_options, (res) => {
+
+        res.setEncoding('utf8');
+        res.on('data', (d) => {
+            response_data += d;
+        });
+
+
+        res.on('end', () => {
+            console.log(response_data);
+         });
+
+    });
+
+    req.on('error', (e) => {
+        console.error(e);
+    });
+
+    //send request witht the post_data form
+    req.write(post_data);
+    req.end();
+```
+
+
+**curl**
+
+```javascript
+curl -d "subscription_id=SUBSCRIPTION_ID" 'https://www.pushmix.co.uk/api/get/topics'
+```
+
+
+** Response**
+
+```javascript
+// /api/get/topics - response
+    // Or an empty array if topics haven't been created
+     [
+       0 => {
+         "id": 17
+         "topic_name": "Order Dispatched"
+       }
+       1 => {
+         "id": 18
+         "topic_name": "Recurring Payments"
+       }
+     ]
+
+
+     // Error response
+
+     {"error":"Error details message"}
+```
 
 
 ### Issues
