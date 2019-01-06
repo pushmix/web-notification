@@ -6,15 +6,16 @@ Pushmix is effective and dependable web service helping to reconnect with your a
 
 `  The service is FREE to register and use.  `
 
-## Requirements
+### Requirements
 Following requirements must be met in order to use Pushmix service:
 
 * Website must be served via `HTTPS://`
 
+` Don't have SSL, check out [Cloudflare](https://dash.cloudflare.com/sign-up) `
 
 You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://dash.pushmix.co.uk/login).
 
-## Features
+### Features
 * Audience segmentation via topic subscription
 * Customised opt-in prompt
 * Action buttons
@@ -30,7 +31,7 @@ You will need Subscription ID to use it. The Subscription ID is free and can be 
 
 
 
-## Getting Started
+### Getting Started
 This documentation designed to help you to start using the Pushmix service and send notification messages just in few minutes, no specific technical skills are required.
 
 For users wishing to have more control and send notifications directly from your own application checkout our [Laravel package](https://www.pushmix.co.uk/docs/laravel-package), [WordPress plug-in](https://www.pushmix.co.uk/docs/wordpress-plugin) or [API section](https://www.pushmix.co.uk/docs/api).
@@ -38,67 +39,84 @@ For users wishing to have more control and send notifications directly from your
 By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://www.pushmix.co.uk/terms), including our [Privacy Policy](https://www.pushmix.co.uk/privacy).
 
 
-## Workflow
+### Workflow
 
 * **01 - Sign Up**
 > Create an account and login to your dashboard.
+
 
 * **02 - Create Subscription**
 > Enter opt-in prompt _Title_ and _Description_, add up to two optional _Topics_ to segment your audience, provide optional _Icon URL_ and _Google Analytics Tracking ID_
 
 
-### Creating subscription
+* **03 - Integration**
+> Copy and paste a few lines of JavaScript or use our [Laravel package](https://github.com/pushmix/laravel-web-notification) or [WordPress plug-in](https://github.com/pushmix/wordpress-web-notifications). For dipper integration with your application see [API section](https://www.pushmix.co.uk/docs/api).
+
+
+* **04 - Grow Audience**
+> Build up and grow your audience by displaying opt-in prompt on more than one of your web pages and encourage visitors to subscribe to your push notifications.
+
+
+* **05 - Engage**
+> Engage your audience with time-sensitive, relevant and accurate push notification messages. Send notifications from [Pushmix Dashboard](https://dash.pushmix.co.uk/login), if you are using one of our plug-ins or prefer API you can send notifications directly from your application.
+
+* **06 - Analyse**
+> Review and analyse notification stats to improve your performance.
+
+
+### Create Subscription
+
 
 
 **1. Details**
 
-In the dashboard click New Subscription and enter your website address where you wish visitors to subscribe for web push notifications. Enter a title and optional line of text to provide subscribers with more details what they subscribing for.
+In the dashboard click _New Subscription_ and enter your *Website URL* and the opt-in prompt *Title*. The optional *Description* field used to motivate your visitors to subscribe to your notifications.
 
-All subscription details can be edited later in exception of the website address.
+All subscription details can be edited later, in exception of the website address.
 
-To review opt-in prompt click Preview button, continue entering details and see changes in real time.
-
-All subscription details can be changed at a later time in exception of the website address. If you have added website address wrong simply delete subscription and start again.
-
-The user can create more than one website subscription.
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_subscription_details_1.png "1.Details")
 
-You can review opt in prompt by pressing `Preview` button, continue entering details and see changes in real time.
+Use the _Preview_ button to view the opt-in prompt, continue entering details and see changes in real time.
 
 
-![alt text](https://pushmix.github.io/web-notification/img/new_subscription_details_2.png "Preview opt in prompt")
+![alt text](https://pushmix.github.io/web-notification/img/new_subscription_details_2.png "Preview opt-in prompt")
 
 **2. Topics**
 
-Topics are important elements of subscription and allow users to subscribe only for notifications of specific types i.e. Special Offers.
+Topics are important elements of subscription, allowing users to subscribe only for notifications of their interests i.e. Order Dispatched.
 
-Topics allow you to segment audience and target only those users who have subscribed to a specific topic. For example, send notification only to those users who have opted in for Special Offers.
+Topics allow you to segment your subscriber's audience and target only those users who have expressed interest in the specific subject. For example, send notification only to those users who have opted in for Order Dispatched topic.
 
-However topics are optional and you can skip this step.
-
-To review opt in prompt click Preview button, continue entering details and see changes in real time.
+However, topics are optional and you can skip this step.
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_subscription_topics_1.png "Topics")
 
 
 **3. Extra**
 
-Notification icon, badge and Google Analytics tracking id, all these parameters are optional.
+*Notification Icon URL*, *Badge Icon URL* and *Google Analytics Tracking ID* are optional parameters.
 
-The icon is the small image that displayed next to the title and the body if the notification. Recommended icon image dimensions are 192x192 pixels.
+The *Icon URL* is the small image that displayed next to the title and the body of the notification. Recommended icon image dimensions are 192x192 pixels.  [Read more](https://developers.google.com/web/fundamentals/push-notifications/display-a-notification#icon).
 
-The badge is a monochrome icon that used to provide more information to the user about where the notification sender. At the time of writing the badge is only used on Chrome for Android. Some browsers only allow icon and badge images to be served over HTTP.
+The *Badge URL* is a monochrome icon that used to provide more information to the user about the notification sender.  [Read more](https://developers.google.com/web/fundamentals/push-notifications/display-a-notification#badge).
 
-Both of these fields are optional, however, if the icon and badge parameters are not provided, default Pushmix icons will be used.
+If *Icon URL* and *Badge URL* parameters are not provided, default Pushmix icons will be used.
 
-Track user interactions in real time with Google Analytics Event Tracking. Enter your GA Tracking Id to receive web notification views and action button clicks events.
+Track user interactions in real time with Google Analytics Event Tracking. Enter your GA Tracking ID to receive web notification views and click events.
 
-Press Submit to create a subscription if all mandatory fields supplied correctly instructions on how to embed subscription code will be displayed.
+Press _Submit_ to create the subscription, instructions on how to embed subscription code will be displayed.
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_subscription_extra_1.png "Extra")
 
 
+### Subscription ID
+
+After you have created new subscription the *Subscription ID* will be displayed at the top of the page. The *Subscription ID* can also be found in Dashboard under subscription _Code_ section.
+
+If you choose [Laravel Package](https://github.com/pushmix/laravel-web-notification) or [WordPress Plug-in](https://github.com/pushmix/wordpress-web-notifications) you will only need *Subscription ID*.
+
+With JavaScript integration, you require to upload *Service Worker* file to the web server and include few lines of JavaScript at the bottom of the page to display subscription opt-in prompt for your visitors to subscribe for web notifications.
 
 
 ### Installation
