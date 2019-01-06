@@ -148,9 +148,9 @@ Copy subscription code from the dashboard and paste it at the bottom of the web 
 ```javascript
 <script type="text/javascript">
     var _pm = {
-        // replace with your Subscription ID
-        "subscriber_id": "UNIQUE_SUBSCRIPTION_ID",
-        // replace with Service Worker UR under your domain
+        // replace with your SUBSCRIPTION_ID
+        "subscriber_id": "SUBSCRIPTION_ID",
+        // replace with Service Worker URL
         "sw" : "https://YOUR_DOMAIN_NAME/pm_service_worker.js",
 
         // PLEASE DO NOT EDIT BELLOW
@@ -192,7 +192,7 @@ In the Dashboard you will find one or more of your subscriptions cards. Press **
 
 There are three steps that you will need to go through to prepare notification message: _Select Audience_, _Enter Content_ and specify _Actions_.
 
-
+![alt text](https://pushmix.github.io/web-notification/img/push_notification_1.png "Dashboard")
 
 
 
@@ -216,7 +216,7 @@ Priority drop-down consists of two choices *High* and *Normal*
 *Notification Lifespan* of a message corresponds to the maximum period of time for which message delivery will be attempted, 1 Hour is default choice. This feature helps to prevent from delivering messages with content that no longer relevant.
 
 
-![alt text](https://pushmix.github.io/web-notification/img/push_notification_1.png "Dashboard")
+
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_2.png "Audience")
 
 
