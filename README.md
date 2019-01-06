@@ -70,7 +70,7 @@ By creating an account and using our service you agree to be bound with our [Ter
 
 **1. Details**
 
-In the dashboard click _New Subscription_ and enter your *Website URL* and the opt-in prompt *Title*. The optional *Description* field used to motivate your visitors to subscribe to your notifications.
+In the dashboard click _New Subscription_ and enter your *Website URL* and the opt-in prompt *Title*. Use the optional *Description* field to motivate your visitors to subscribe to your notifications.
 
 All subscription details can be edited later, in exception of the website address.
 
@@ -112,7 +112,7 @@ Press _Submit_ to create the subscription, instructions on how to embed subscrip
 
 ### Subscription ID
 
-After you have created new subscription the *Subscription ID* will be displayed at the top of the page. The *Subscription ID* can also be found in Dashboard under subscription _Code_ section.
+After you have created new subscription the *Subscription ID* will be displayed on the screen. The *Subscription ID* can also be found later in the Dashboard under subscription _Code_ section.
 
 If you choose [Laravel Package](https://github.com/pushmix/laravel-web-notification) or [WordPress Plug-in](https://github.com/pushmix/wordpress-web-notifications) you will only need *Subscription ID*.
 
@@ -121,42 +121,39 @@ With JavaScript integration, you require to upload *Service Worker* file to the 
 
 ### Installation
 
-Integration with Pushmix service is simple and can be achieved using one of the following methods:
+Following methods are available to integrate Pushmix service:
 
 * JavaScript (see below)
 * [Web Push Notifications for Laravel](https://github.com/pushmix/laravel-web-notification)
 * [Web Push Notifications for WordPress](https://github.com/pushmix/wordpress-web-notifications)
 
-If you using Laravel Package or WordPress Plugin you can skip Installation section.
+If you using Laravel Package or WordPress Plug-in you can skip Installation section.
 
-
-
-### JavaScript Installation
+`  For notifications open rate and click through stats you will need to login to Pushmix Dashboard. `
 
 **Service Worker**
 
-[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of the public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to push web notifications from.
+[Download](https://dash.pushmix.co.uk/js/pm_service_worker.js) service worker and upload it to the root of the public directory on your web server. The service worker file must be accessible via public URL under the domain name you wish to send web notifications from.
 
 For example, my website domain name is `pushmix.co.uk` than Service Worker must be accessible via this URL:
-`https://www.pushmix.co.uk/pm_service_worker.js`
 
-If you wish to place service worker file inside of any other folders on your server, fill free to do so. However please don't forget to update the service worker URL path in the tracking code, see below.
-
-See Google [search results](https://www.google.co.uk/search?safe=strict&ei=eC7GW_2iGszCgAaksp6QAQ&q=service+workers&oq=service+workes&gs_l=psy-ab.12...0.0..15074...0.0..0.0.0.......0......gws-wiz.NGcT7bDgRlo) for details and use of service workers.
-
+` https://www.pushmix.co.uk/pm_service_worker.js `
 
 
 **Subscription Code**
 
-Copy subscription code from the dashboard and paste it at the bottom of the web page to start building your audience. You can add subscription code to more than one page. When a webpage is loaded subscription code trigger the opt-in prompt to be displayed. In the event when the web browser is not supported, an opt-in prompt will not be displayed.
+Copy subscription code from the dashboard and paste it at the bottom of the web page to start building your audience. You can add subscription code to more than one page. When a webpage is loaded subscription code trigger the opt-in prompt to be displayed. In the event when the web browser is not supported, the opt-in prompt will not be displayed.
 
-The subscription code can also be added via Google Tag Manager, please see Google [search results](https://www.google.co.uk/search?q=Adding+Custom+JavaScript+to+Your+Website+Using+Google+Tag+Manager&oq=Adding+Custom+JavaScript+to+Your+Website+Using+Google+Tag+Manager) for articles that describes this process.
 
 ```javascript
 <script type="text/javascript">
     var _pm = {
+        // replace with your Subscription ID
         "subscriber_id": "UNIQUE_SUBSCRIPTION_ID",
+        // replace with Service Worker UR under your domain
         "sw" : "https://YOUR_DOMAIN_NAME/pm_service_worker.js",
+
+        // PLEASE DO NOT EDIT BELLOW
         "api": "https://www.pushmix.co.uk/api/"
     };
     (function(){
@@ -171,22 +168,26 @@ The subscription code can also be added via Google Tag Manager, please see Googl
 </script>
 ```
 
-By default, subscription code is set to load opt-in prompt straight after the web page is loaded. This behaviour can be quickly adjusted and tailored to your own needs, for example, to display an opt-in prompt on click event.
+` Include Subscription Code using Google Tag Manager [Custom HTML tag](https://support.google.com/tagmanager/answer/6107167?hl=en). `
 
-![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Preview opt in prompt")
 
-Visit the section of your website where you have added the subscription code to ensure the opt-in prompt is working as expected. Any changes to the subscription details applied in the dashboard will have an immediate effect in the opt-in prompt, web page reload may be required.
+**Opt-in Prompt**
+![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Preview opt-in prompt")
 
-An opt-in prompt can be used to subscribe for web push notifications as well as toggle subscription states or unsubscribe from further notifications.
+Visit the section of your website where you have added the subscription code to ensure the opt-in prompt is working as expected. Any changes to the subscription details applied in the Pushmix Dashboard will have an immediate effect, web page reload may be required.
+
+The opt-in prompt can be used to subscribe for push notifications as well as toggle subscription states or unsubscribe from further notifications.
 
 
 
 
 ### Sending Web Push Notifications
 
-The dashboard displays one or more of your subscriptions summary. Press `Push Notification` button at the bottom of subscription card.
+In the Dashboard you will find one or more of your subscriptions cards. Press **Push Notification** button at the bottom of subscription card.
 
-There are three steps that you will need to go through to prepare notification message: `Select Audience`, `Enter Content` and `Actions`.
+There are three steps that you will need to go through to prepare notification message: _Select Audience_, _Enter Content_ and specify _Actions_.
+
+
 
 
 
@@ -195,17 +196,19 @@ There are three steps that you will need to go through to prepare notification m
 
 **Audience**
 
-From the drop-down select subscriber's Audience, you would like to target, by default all subscribers are selected. The number in the brackets indicating the total number of subscribers for each topic.
+From the drop-down select subscriber's Audience, you would like to target, by default all subscribers are selected. The number in the brackets indicating the total number of subscribers for each topic*.
 
-If you have specified additional topics, they also are available for selection from the drop-down box. Only one audience group can be selected at a time.
+`  *Number of subscribers only available in the Pushmix Dashboard. `
 
-Priority drop-down consists of two choices `High` and `Normal`, High is selected by default. This feature regulates how web push notifications being delivered.
+If you have specified additional topics, they are available from the drop-down box. Only one audience group can be selected at a time.
 
-`High` priority messages attempted to be delivered immediately.
+Priority drop-down consists of two choices *High* and *Normal*
 
-`Normal` priority messages won't open network connections on a sleeping device, and message delivery may be delayed to conserve battery.
+*High* is selected by default. This feature regulates how push notification being delivered, priority messages attempted to be delivered immediately.
 
-Maximum notification lifespan of a message corresponds to the maximum period of time for which message delivery will be attempted, `1 Hour` is default choice. This feature helps to prevent from delivering messages with content that no longer relevant.
+*Normal* priority messages won't open network connections on a sleeping device, and message delivery may be delayed to conserve battery.
+
+*Notification Lifespan* of a message corresponds to the maximum period of time for which message delivery will be attempted, 1 Hour is default choice. This feature helps to prevent from delivering messages with content that no longer relevant.
 
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_1.png "Dashboard")
@@ -216,7 +219,7 @@ Maximum notification lifespan of a message corresponds to the maximum period of 
 
 **Notification Title, Body and URL**
 
-Enter notification Title and Body, keep it brief. In the URL field enter a valid website address, when a user clicks or press on notification this URL will be loaded in the web browser.
+Enter notification *Title* and *Body*, keep it brief. In the *URL* field enter a valid website address, when a user clicks or press on notification this *URL* will be loaded in the web browser.
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_2.png "2. Content")
 
@@ -224,12 +227,13 @@ Enter notification Title and Body, keep it brief. In the URL field enter a valid
 
 #### 2. Actions
 
-You can define up to two action buttons to be displayed with a notification. All fields are optional, however, if you choose to specify Action Title than Action URL is required.
+You can define up to two action buttons to be displayed with a notification. All fields are optional, however, if you choose to specify *Action Title* than *Action URL* is required.
 
-Additionally, you can select an icon from the drop-down list to display on the button. Please note action icons may not be displayed.
+Additionally, you can select an icon from the drop-down list to display on the button. Please note: action icons may not be displayed.
+
 
 **Image URL**
-The large image can be included in the notification body, recommended width of 1350px or more would be a good bet. Simply enter valid image URL.
+The large image can be included in the notification body, recommended the width of 1350px or more would be a good bet. Simply enter valid image URL.
 
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_4.png "3. Actions")
@@ -237,28 +241,26 @@ The large image can be included in the notification body, recommended width of 1
 
 **Testing**
 
-Press `Push Test` button. If your web browser supports web push notifications you will recive one shortly.
+It's always good to test notification and preview results before sending it out. Simply press *Push Test* button. If your web browser supports push notifications you will see one shortly.
 
-Once you happy with the test press `Push Notification` button and your web push notifications will start being dispatched. Check your Google Analytics Real-Time Events section to see user interactions with notification you just send.
-
-In the case when your web browser is not compatible with push notifications you can still send the message by pressing `Push Notification` button to selected subscribers audience.
+Once you happy with test press *Push Notification button* and your notifications will be dispatched. Check your Google Analytics Real-Time Events section to see user interactions with web notifications you just send.
 
 | Windows Chrome  69|
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_windows_chrome_69.png "Windows Chrome 69")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_windows_chrome_69@2.png "Windows Chrome 69")|
 
 | Windows Firefox  63|
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_windows_ff_63.png "Windows Firefox 63")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_windows_ff_63@2.png "Windows Firefox 63")|
 
 
 | Linux Firefox 62  |
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_firefox_62.png "Linux Firefox 62")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_firefox_62@2.png "Linux Firefox 62")|
 
 | Linux Chromium 69 |
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_chromium_69.png "Linux Chromium 69")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_chromium_69@2.png "Linux Chromium 69")|
 
 
 | Linux Chrome 69 |
@@ -268,12 +270,12 @@ In the case when your web browser is not compatible with push notifications you 
 
 | Samsung Chrome 70  |
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_samsung_chrome_70.png "Linux Chrome 70")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_samsung_chrome_70@22.png "Samsung Chrome 70 ")|
 
 
 | Samsung Internet 7  |
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_samsung_internet_7.png "Linux Internet 7")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_samsung_internet_7@22.png "Samsung Internet 7")|
 
 
 ### Logs
