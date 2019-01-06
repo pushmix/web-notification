@@ -4,7 +4,7 @@
 
 Pushmix is effective and dependable web service helping to reconnect with your audience through customised web push notifications.
 
-> The service is FREE to register and use. 
+> The service is FREE to register and use.
 
 ### Requirements
 Following requirements must be met in order to use Pushmix service:
@@ -127,7 +127,7 @@ Following methods are available to integrate Pushmix service:
 * [Web Push Notifications for Laravel](https://github.com/pushmix/laravel-web-notification)
 * [Web Push Notifications for WordPress](https://github.com/pushmix/wordpress-web-notifications)
 
-If you using Laravel Package or WordPress Plug-in you can skip Installation section.
+If you using Laravel Package or WordPress Plug-in you can skip the rest of this document.
 
 > For notifications open rate and click through stats you will need to login to Pushmix Dashboard.
 
