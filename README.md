@@ -14,7 +14,7 @@ Following requirements must be met in order to use Pushmix service:
 
 You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://dash.pushmix.co.uk/login).
 
-## Features:
+## Features
 * Audience segmentation via topic subscription
 * Customised opt-in prompt
 * Action buttons
@@ -31,16 +31,17 @@ You will need Subscription ID to use it. The Subscription ID is free and can be 
 
 
 ## Getting Started
-This documentation designed to help you to start using the Pushmix service and send web notification messages just in few minutes, no specific technical skills are required.
+This documentation designed to help you to start using the Pushmix service and send notification messages just in few minutes, no specific technical skills are required.
 
 For users wishing to have more control and send notifications directly from your own application checkout our [Laravel package](https://www.pushmix.co.uk/docs/laravel-package), [WordPress plug-in](https://www.pushmix.co.uk/docs/wordpress-plugin) or [API section](https://www.pushmix.co.uk/docs/api).
 
 By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://www.pushmix.co.uk/terms), including our [Privacy Policy](https://www.pushmix.co.uk/privacy).
 
 
-# Workflow
+## Workflow
 
 * 01 - Sign Up
+
 ... Create an account and login to your dashboard.
 
 
