@@ -265,7 +265,7 @@ Once you happy with test press *Push Notification button* and your notifications
 
 | Linux Chrome 69 |
 | ------------- |
-| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_chrome_69.png "Linux Chrome 69")|
+| ![alt text](https://pushmix.github.io/web-notification/img/notification_example_linux_chrome_69@2.png "Linux Chrome 69")|
 
 
 | Samsung Chrome 70  |
