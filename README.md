@@ -577,6 +577,10 @@ curl_close($ch);
 return json_decode($result);
 ```
 
+
+**JavaScript**
+
+
 ```javascript
 const payloadData = {
   // Subscription ID
