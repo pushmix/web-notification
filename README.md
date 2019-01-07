@@ -2,9 +2,11 @@
 
 [https://www.pushmix.co.uk](https://www.pushmix.co.uk)
 
+In the past year I have integrated Web Push Notifications into a number of websites and in most cases, I was repeating my self all over again. This brought me to the idea of creating a service that will satisfy the majority requirements and provide a simple yet sturdy way of getting started with push notifications. 
+
 Pushmix is effective and dependable web service helping to reconnect with your audience through customised web push notifications.
 
-> The service is FREE to register and use.
+> Our service is FREE to register and use.
 
 ### Requirements
 Following requirements must be met in order to use Pushmix service:
@@ -13,7 +15,6 @@ Following requirements must be met in order to use Pushmix service:
 
 > Don't have SSL, check out [Cloudflare](https://dash.cloudflare.com/sign-up)
 
-You will need Subscription ID to use it. The Subscription ID is free and can be obtained from [pushmix.co.uk](https://dash.pushmix.co.uk/login).
 
 ### Features
 * Audience segmentation via topic subscription
@@ -34,7 +35,7 @@ You will need Subscription ID to use it. The Subscription ID is free and can be 
 ### Getting Started
 This documentation designed to help you to start using the Pushmix service and send notification messages just in few minutes, no specific technical skills are required.
 
-For users wishing to have more control and send notifications directly from your own application checkout our [Laravel package](https://www.pushmix.co.uk/docs/laravel-package), [WordPress plug-in](https://www.pushmix.co.uk/docs/wordpress-plugin) or [API section](https://www.pushmix.co.uk/docs/api).
+For users wishing to have more control and send notifications directly from your own application check out our [Laravel package](https://www.pushmix.co.uk/docs/laravel-package), [WordPress plug-in](https://www.pushmix.co.uk/docs/wordpress-plugin) or [API section](https://www.pushmix.co.uk/docs/api).
 
 By creating an account and using our service you agree to be bound with our [Terms & Conditions](https://www.pushmix.co.uk/terms), including our [Privacy Policy](https://www.pushmix.co.uk/privacy).
 
@@ -42,7 +43,7 @@ By creating an account and using our service you agree to be bound with our [Ter
 ### Workflow
 
 * **01 - Sign Up**
-> Create an account and login to your dashboard.
+> Create an account or log in to your dashboard.
 
 
 * **02 - Create Subscription**
@@ -50,11 +51,11 @@ By creating an account and using our service you agree to be bound with our [Ter
 
 
 * **03 - Integration**
-> Copy and paste a few lines of JavaScript or use our [Laravel package](https://github.com/pushmix/laravel-web-notification) or [WordPress plug-in](https://github.com/pushmix/wordpress-web-notifications). For dipper integration with your application see [API section](https://www.pushmix.co.uk/docs/api).
+> Copy and paste a few lines of JavaScript or use our [Laravel package](https://github.com/pushmix/laravel-web-notification) or [WordPress plug-in](https://github.com/pushmix/wordpress-web-notifications). See [API section](https://www.pushmix.co.uk/docs/api) for more granular integration with your application.
 
 
 * **04 - Grow Audience**
-> Build up and grow your audience by displaying opt-in prompt on more than one of your web pages and encourage visitors to subscribe to your push notifications.
+> Build up and grow your audience by displaying an opt-in prompt on more than one of your web pages and encourage visitors to subscribe to your push notifications.
 
 
 * **05 - Engage**
@@ -114,7 +115,7 @@ Press _Submit_ to create the subscription, instructions on how to embed subscrip
 
 After you have created new subscription the *Subscription ID* will be displayed on the screen. The *Subscription ID* can also be found later in the Dashboard under subscription _Code_ section.
 
-If you choose [Laravel Package](https://github.com/pushmix/laravel-web-notification) or [WordPress Plug-in](https://github.com/pushmix/wordpress-web-notifications) you will only need *Subscription ID*.
+If you choose [Laravel Package](https://github.com/pushmix/laravel-web-notification) or [WordPress Plugin](https://github.com/pushmix/wordpress-web-notifications) you will only need *Subscription ID*.
 
 With JavaScript integration, you require to upload *Service Worker* file to the web server and include few lines of JavaScript at the bottom of the page to display subscription opt-in prompt for your visitors to subscribe for web notifications.
 
@@ -179,7 +180,7 @@ Copy subscription code from the dashboard and paste it at the bottom of the web 
 
 ![alt text](https://pushmix.github.io/web-notification/img/new_4.png "Preview opt-in prompt")
 
-Visit the section of your website where you have added the subscription code to ensure the opt-in prompt is working as expected. Any changes to the subscription details applied in the Pushmix Dashboard will have an immediate effect, web page reload may be required.
+Visit the section of your website where you have added the subscription code to ensure the opt-in prompt is working as expected. Any changes to the subscription details applied in the Pushmix Dashboard will have an immediate effect, web page reloads may be required.
 
 The opt-in prompt can be used to subscribe for push notifications as well as toggle subscription states or unsubscribe from further notifications.
 
@@ -188,9 +189,9 @@ The opt-in prompt can be used to subscribe for push notifications as well as tog
 
 ### Sending Web Push Notifications
 
-In the Dashboard you will find one or more of your subscriptions cards. Press **Push Notification** button at the bottom of subscription card.
+In the Dashboard, you will find one or more of your subscriptions cards. Press **Push Notification** button at the bottom of subscription card.
 
-There are three steps that you will need to go through to prepare notification message: _Select Audience_, _Enter Content_ and specify _Actions_.
+There are three steps that you will need to go through to prepare the notification message: _Select Audience_, _Enter Content_ and specify _Actions_.
 
 ![alt text](https://pushmix.github.io/web-notification/img/push_notification_1.png "Dashboard")
 
@@ -248,7 +249,7 @@ The large image can be included in the notification body, recommended the width 
 
 It's always good to test notification and preview results before sending it out. Simply press *Push Test* button. If your web browser supports push notifications you will see one shortly.
 
-Once you happy with test press *Push Notification button* and your notifications will be dispatched. Check your Google Analytics Real-Time Events section to see user interactions with web notifications you just send.
+Once you happy with the test press *Push Notification button* and your notifications will be dispatched. Check your Google Analytics Real-Time Events section to see user interactions with web notifications you just send.
 
 | Windows Chrome  69|
 | ------------- |
@@ -332,11 +333,11 @@ For your convenience re-send notification to the same subscribers or choose to r
 
 **API Endpoint**
 
-All API URLs listed in this documentations are relative to `https://www.pushmix.co.uk/api/`
+All API URLs listed in this documentation are relative to `https://www.pushmix.co.uk/api/`
 
 All methods are accessed via `https://pushmix.co.uk/api/METHOD-NAME`
 
-The response data encoded in JSON format. Any none-200 HTTP response code are an error, the returned data will contain more information.
+The response data encoded in JSON format. Any none-200 HTTP response code is an error, the returned data will contain more information.
 
 
 
